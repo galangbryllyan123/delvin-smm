@@ -1,0 +1,42 @@
+		<!-- jQuery 2.2.3 -->
+		<script src="<?=$site->url;?>cdn/plugins/jQuery/jquery-2.2.3.min.js"></script>
+		<?php if(!isset($_SESSION['account'])) { echo '<script src="'.$site->url.'cdn/dist/js/login.js"></script>'; } ?>
+<?php if(preg_match('#order.php#', $_SERVER['SCRIPT_NAME'])>0){ echo '<script src="'.$site->url.'cdn/dist/js/neworder.js"></script>'; } else if(preg_match('#manage_order.php#', $_SERVER['SCRIPT_NAME'])>0){ echo '<script src="'.$site->url.'cdn/dist/js/manage_order.js"></script>'; }  else if(preg_match('#manage_info.php#', $_SERVER['SCRIPT_NAME'])>0){ echo '<script src="'.$site->url.'cdn/dist/js/manage_information.js"></script>'; }  else if(preg_match('#manage_deposit.php#', $_SERVER['SCRIPT_NAME'])>0){ echo '<script src="'.$site->url.'cdn/dist/js/manage_deposit.js"></script>'; }  else if(preg_match('#manage_service.php#', $_SERVER['SCRIPT_NAME'])>0){ echo '<script src="'.$site->url.'cdn/dist/js/manage_service.js"></script>'; }  else if(preg_match('#manage_category.php#', $_SERVER['SCRIPT_NAME'])>0){ echo '<script src="'.$site->url.'cdn/dist/js/manage_category.js"></script>'; }  else if(preg_match('#manage_order_manual.php#', $_SERVER['SCRIPT_NAME'])>0){ echo '<script src="'.$site->url.'cdn/dist/js/manage_order.js"></script>'; } ?>
+
+		<!-- jQuery UI 1.11.4 -->
+		<script src="<?=$site->url;?>cdn/dist/js/jquery-ui.min.js"></script>
+		<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+		<script>
+		  $.widget.bridge('uibutton', $.ui.button);
+		</script>
+		<!-- Bootstrap 3.3.6 -->
+		<script src="<?=$site->url;?>cdn/bootstrap/js/bootstrap.min.js"></script>
+		<!-- Morris.js charts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+		<script src="<?=$site->url;?>cdn/plugins/morris/morris.min.js"></script>
+		<!-- Sparkline -->
+		<script src="<?=$site->url;?>cdn/plugins/sparkline/jquery.sparkline.min.js"></script>
+		<!-- jvectormap -->
+		<script src="<?=$site->url;?>cdn/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="<?=$site->url;?>cdn/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+		<!-- jQuery Knob Chart -->
+		<script src="<?=$site->url;?>cdn/plugins/knob/jquery.knob.js"></script>
+		<!-- daterangepicker -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+		<script src="<?=$site->url;?>cdn/plugins/daterangepicker/daterangepicker.js"></script>
+		<!-- datepicker -->
+		<script src="<?=$site->url;?>cdn/plugins/datepicker/bootstrap-datepicker.js"></script>
+		<!-- Bootstrap WYSIHTML5 -->
+		<script src="<?=$site->url;?>cdn/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+		<!-- Slimscroll -->
+		<script src="<?=$site->url;?>cdn/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+		<!-- FastClick -->
+		<script src="<?=$site->url;?>cdn/plugins/fastclick/fastclick.js"></script>
+		<!-- AdminLTE App -->
+		<script src="<?=$site->url;?>cdn/dist/js/app.min.js"></script>
+		<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+		<script src="<?=$site->url;?>cdn/dist/js/pages/dashboard.js"></script>
+		<!-- AdminLTE for demo purposes -->
+		<script src="<?=$site->url;?>cdn/dist/js/demo.js"></script>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!-- Sidebar user panel -->
+			  <div class="user-panel">
+				<div class="pull-left image">
+				  <img src="<?=$site->url;?>cdn/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+				</div>
+				<div class="pull-left info">
+				  <p><?=$h['nama'];?></p>
+				  <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+				</div>
+			  </div>
+			  <!-- search form -->
+			  <form action="#" method="get" class="sidebar-form">
+				<div class="input-group">
+				  <input type="text" name="q" class="form-control" placeholder="Search...">
+					  <span class="input-group-btn">
+						<button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+						</button>
+					  </span>
+				</div>
+			  </form>
+			  <!-- /.search form -->
+			  <!-- sidebar menu: : style can be found in sidebar.less -->
+			  <ul class="sidebar-menu">
+				<li class="header">MAIN NAVIGATION</li>
+				<li<? if(preg_match('#index.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>">
+					<i class="fa fa-dashboard"></i> <span>Dashboard</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#profile.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>profile.php">
+					<i class="fa fa-user"></i> <span>Pengaturan Akun</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#orders.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>order.php">
+					<i class="fa fa-shopping-cart"></i> <span>Order Baru</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#depo.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>depo.php">
+					<i class="fa fa-bank"></i> <span>Deposit Saldo</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#history.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>history.php">
+					<i class="fa fa-clock-o"></i> <span>Riwayat Pesanan</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#harga.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>harga.php">
+					<i class="fa fa-money"></i> <span>Harga</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#api_i.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>api_i.php">
+					<i class="fa fa-gear"></i> <span>Dokumentasi API</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#logout.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>logout.php">
+					<i class="fa fa-sign-out"></i> <span>Keluar</span>
+				  </a>
+				</li>
+				<?php if($h['level'] == 'admin') { ?>
+				<li class="header">ADMIN NAVIGATION</li>
+				<li<? if(preg_match('#listmember.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>listmember.php">
+					<i class="fa fa-user"></i> <span>Daftar User</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#manage_order.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>manage_order.php">
+					<i class="fa fa-tasks"></i> <span>Kelola Pesanan</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#manage_order_manual.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>manage_order_manual.php">
+					<i class="fa fa-tasks"></i> <span>Kelola Pesanan Manual</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#manage_info.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>manage_info.php">
+					<i class="fa fa-chevron-right"></i> <span>Kelola Informasi</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#manage_deposit.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>manage_deposit.php">
+					<i class="fa fa-gear"></i> <span>Kelola Deposit</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#manage_service.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>manage_service.php">
+					<i class="fa fa-gear"></i> <span>Kelola Layanan</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#manage_category.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>manage_category.php">
+					<i class="fa fa-gear"></i> <span>Kelola Category</span>
+				  </a>
+				</li>
+				<li<? if(preg_match('#manage_api.php#', $_SERVER['SCRIPT_NAME'])>0) print ' class="active"';?>>
+				  <a href="<?=$site->url?>manage_api.php">
+					<i class="fa fa-gear"></i> <span>Kelola API</span>
+				  </a>
+				</li>
+				<? } ?>
+			  </ul>
